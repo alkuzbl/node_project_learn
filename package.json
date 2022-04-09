@@ -1,17 +1,25 @@
 {
-  "name": "weather-cli-node-lesson",
+  "name": "weather-cli-lesson",
   "version": "1.0.0",
   "description": "Educational project",
-  "main": "app.js",
-  "bin": "./app.js",
+  "main": "weather.js",
+  "bin": {
+    "weather": "weather.js"
+  },
   "author": "Aleksandr Kuznecov",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node weather.js"
   },
   "bugs": {
     "url": "",
     "email": ""
-  }
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "chalk": "^5.0.1",
+    "dedent-js": "^1.0.1"
+  },
+  "type": "module"
 }
