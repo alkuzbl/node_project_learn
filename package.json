@@ -1,6 +1,6 @@
 {
   "name": "weather-cli-lesson",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Educational project",
   "main": "weather.js",
   "bin": {
@@ -8,7 +8,7 @@
   },
   "author": "Aleksandr Kuznecov",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "scripts": {
     "start": "node weather.js"
   },

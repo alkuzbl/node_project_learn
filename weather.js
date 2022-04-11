@@ -1,8 +1,8 @@
-#!/ust/bin/env node
-import {getArgs} from './src/helpers/args.js'
-import {getKeyValue, saveKeyValue} from './src/services/storage.services.js'
-import {printError, printSuccess, printHelp, printWeather} from './src/services/log.services.js'
-import {getWeather, getIcon} from './src/services/api.services.js'
+#!/usr/bin/env node
+import {getArgs} from './helpers/args.js'
+import {getKeyValue, saveKeyValue} from './services/storage.services.js'
+import {printError, printSuccess, printHelp, printWeather} from './services/log.services.js'
+import {getWeather, getIcon} from './services/api.services.js'
 
 
 const saveToken = async (token) => {
@@ -36,9 +36,7 @@ const saveCity = async (city) => {
 const getForecastWeather = async () => {
     try {
         const city = await getKeyValue('city')
-
         const weather = await getWeather(city)
-
         const icon = getIcon(weather.data.weather[0].icon)
 
         printWeather(weather.data, icon)
